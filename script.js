@@ -1,3 +1,23 @@
+function date_diff_indays(date1, date2) {
+  dt1 = new Date(date1);
+  dt2 = new Date(date2);
+  return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
+}
+
+const firstDate = new Date('Sep 7 2020');
+const currentDate = new Date();
+const dayNum = date_diff_indays(firstDate, currentDate);
+
+
+const numToShow = 6;
+const startIndex = dayNum * numToShow;
+const $content = $('#content');
+
+for(let i = startIndex; i < startIndex + numToShow; i++) {
+  $content.append(tiktoks[i]);
+}
+
+/*
 function render(picNum) {
 	return `<img src="./img/${picNum}.jpg">`;
 }
@@ -38,3 +58,4 @@ function randomize(arr) {
   }
   return arr;
 }
+*/

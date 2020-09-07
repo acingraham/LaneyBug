@@ -78,3 +78,14 @@ img {
 		background-position: 0% 50%
 	}
 }
+
+
+
+/* ========== Below this added for tiktok version ========= */
+#content {
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	overflow-y: auto;
+}
