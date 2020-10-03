@@ -8,7 +8,6 @@ const firstDate = new Date('Sep 7 2020');
 const currentDate = new Date();
 const dayNum = date_diff_indays(firstDate, currentDate);
 
-
 const numToShow = 6;
 const startIndex = dayNum * numToShow;
 const $content = $('#content');
@@ -16,6 +15,21 @@ const $content = $('#content');
 for(let i = startIndex; i < startIndex + numToShow; i++) {
   $content.append(tiktoks[i]);
 }
+
+/*
+setInterval(() => {
+  console.log('in setInterval');
+  const $iframes = $('iframe');
+  $iframes.each((index, element) => {
+    console.log('this', element);
+    var cssLink = document.createElement("link");
+    cssLink.href = "./tiktokstyles.css"; 
+    cssLink.rel = "stylesheet"; 
+    cssLink.type = "text/css"; 
+    element.document.head.appendChild(cssLink);
+  });
+}, 5000);
+*/
 
 /*
 function render(picNum) {
