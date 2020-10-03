@@ -19,6 +19,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	padding: 10px;
 }
 
@@ -79,8 +80,6 @@ img {
 	}
 }
 
-
-
 /* ========== Below this added for tiktok version ========= */
 #content {
 	height: 100%;
@@ -88,4 +87,17 @@ img {
 	flex-wrap: wrap;
 	align-items: center;
 	overflow-y: auto;
+}
+
+.navigation {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	font-size: 30px;
+	border-bottom: 1px solid white;
+	padding-bottom: 10px;
+}
+
+#prev, #next {
+	cursor: pointer;
 }
